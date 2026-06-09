@@ -1,0 +1,135 @@
+AWS Lambda & Boto3 Automation Projects
+
+Technologies Used - AWS Lambda - Amazon EC2 - Amazon S3 - Amazon
+DynamoDB - Amazon SNS - Amazon EventBridge - IAM Roles & Policies -
+CloudWatch Logs - Boto3 (Python SDK)
+
+================================================== ASSIGNMENT 1:
+Automated EC2 Instance Management
+==================================================
+
+Objective: Automate the starting and stopping of EC2 instances based on
+tags.
+
+Resources Created: - AWS_Lambda_Stop (Action=Auto-Stop) -
+AWS_Lambda_Start (Action=Auto-Start)
+
+IAM Role: - LambdaEC2ManagerRole
+
+Policies: - AmazonEC2FullAccess - AWSLambdaBasicExecutionRole
+
+Lambda Function: - EC2AutoManager
+
+Steps Performed: 
+1. Created two EC2 instances. 
+2. Added tags Auto-Stop
+and Auto-Start. 
+3. Created IAM Role. 
+4. Attached required policies. 
+5.Created Lambda function. 
+6. Used Boto3 to describe, stop, and start
+instances. 
+7. Manually invoked Lambda. 
+8. Verified EC2 state changes.
+
+Outcome: Successfully automated EC2 start and stop operations.
+
+================================================== ASSIGNMENT 5:
+Auto-Tagging EC2 Instances
+==================================================
+
+Objective: Automatically tag newly launched EC2 instances.
+
+IAM Role: - LambdaEC2AutoTagRole
+
+Policies: - AmazonEC2FullAccess - AWSLambdaBasicExecutionRole
+
+Lambda Function: - EC2AutoTagger
+
+EventBridge Rule: - EC2LaunchTagRule - Event Bus: default
+
+Tags Added: - LaunchDate - Environment=Dev
+
+Steps Performed: 1. Created IAM Role. 2. Created Lambda Function. 3.
+Added Boto3 code. 4. Created EventBridge Rule. 5. Connected Lambda as
+target. 6. Launched EC2 instance. 7. Verified automatic tagging.
+
+Outcome: Successfully implemented event-driven EC2 auto-tagging.
+
+================================================== ASSIGNMENT 7:
+DynamoDB Item Change Alert
+==================================================
+
+Objective: Send email notifications whenever DynamoDB items are
+modified.
+
+Resources: - DynamoDB Table: EmployeeTable - SNS Topic:
+DynamoDBChangeAlert
+
+IAM Role: - DynamoDBAlertLambdaRole
+
+Policies: - AmazonDynamoDBFullAccess - AmazonSNSFullAccess -
+AWSLambdaBasicExecutionRole
+
+Lambda Function: - DynamoDBChangeNotifier
+
+Steps Performed: 
+1. Created SNS Topic. 
+2. Created Email Subscription. 
+3.Confirmed Subscription. 
+4. Created DynamoDB Table. 
+5. Added sample data.
+6. Enabled DynamoDB Streams. 
+7. Created IAM Role. 
+8. Created Lambda Function. 
+9. Configured SNS Topic ARN. 
+10. Added DynamoDB Stream Trigger. 
+11. Modified DynamoDB item. 
+12. Received email notification.
+
+Outcome: Successfully monitored database changes and received alerts.
+
+================================================== ASSIGNMENT 13: S3
+Bucket Permission Audit
+==================================================
+
+Objective: Detect public S3 buckets and send email notifications.
+
+Resources: - Private S3 Bucket - Public S3 Bucket - SNS Topic:
+S3PublicBucketAlert
+
+IAM Role: - S3AuditLambdaRole
+
+Policies: - AmazonS3FullAccess - AmazonSNSFullAccess -
+AWSLambdaBasicExecutionRole
+
+Lambda Function: - S3BucketAudit
+
+Steps Performed: 
+1. Created S3 Buckets. 
+2. Configured one bucket as
+public. 
+3. Created SNS Topic. 
+4. Created Email Subscription. 
+5. Created IAM Role. 
+6. Created Lambda Function. 
+7. Added Boto3 code. 
+8. Configured
+SNS ARN. 
+9. Tested Lambda. 
+10. Verified public bucket detection. 
+11.Received SNS alert.
+
+Outcome: Successfully implemented automated S3 security auditing.
+
+================================================== FINAL SUMMARY
+==================================================
+
+Completed Assignments: - Assignment 1: EC2 Start/Stop Automation -
+Assignment 5: EC2 Auto Tagging - Assignment 7: DynamoDB Change Alerts -
+Assignment 13: S3 Security Audit
+
+AWS Services Used: - EC2 - S3 - Lambda - DynamoDB - SNS - EventBridge -
+IAM - CloudWatch - Boto3
+
+
